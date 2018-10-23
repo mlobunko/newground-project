@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import "normalize.css";
-import "react-virtualized/styles.css";
 import registerServiceWorker from "./registerServiceWorker";
 
 import configureStore from "./configureStore";
