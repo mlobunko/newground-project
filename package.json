@@ -1,0 +1,44 @@
+{
+  "name": "newground",
+  "homepage": "https://mlobunko.github.io/newground-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "normalize.css": "^8.0.0",
+    "prettier": "^1.14.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-saga": "^0.16.2",
+    "styled-components": "^3.4.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "node_modules/.bin/eslint --max-warnings=0",
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject",
+    "eslint": "node_modules/.bin/eslint src/",
+    "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
